@@ -1,7 +1,51 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Spectator, createComponentFactory } from '@ngneat/spectator';
 
-describe('AppComponent', () => {
+describe('AppComponent (avec spectator)', () => {
+  let spectator: Spectator<AppComponent>;
+  let component: AppComponent;
+
+  const createComponent = createComponentFactory({
+    component: AppComponent,
+    declarations: [AppComponent],
+  });
+
+  beforeEach(() => {
+    spectator = createComponent();
+    component = spectator.component;
+  });
+
+  it('should article be initialize when page is loaded', () => {
+    expect(spectator.query('article')?.textContent).toBe(
+      'Cliquer sur le bouton "Générer"'
+    );
+  });
+
+  it('should change message when user clicks generate button', () => {
+    spectator.click('button');
+    expect(spectator.query('article')).toHaveText('MON_MOT_DE_PASSE');
+  });
+
+  it('should update settings when user clicks switch buttons', () => {
+    spectator.click('#uppercases');
+    expect(component.uppercases).toBe(true);
+
+    spectator.click('#symbols');
+    expect(component.symbols).toBe(true);
+
+    spectator.click('#numbers');
+    expect(component.numbers).toBe(true);
+  });
+
+  it('should slide bar return expected written value', () => {
+    // Exemple sur les élements de type 'input'
+    spectator.typeInElement('33', '#lengh');
+    expect(component.lengh).toBe(33);
+  });
+});
+
+describe('AppComponent (avec TestBed)', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
   // le beforeEach va permettre de refactoriser. On relance le test bed avant chaque test.
