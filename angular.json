@@ -16,17 +16,13 @@
             "outputPath": "dist/playground",
             "index": "projects/playground/src/index.html",
             "main": "projects/playground/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/playground/tsconfig.app.json",
             "assets": [
               "projects/playground/src/favicon.ico",
               "projects/playground/src/assets"
             ],
-            "styles": [
-              "projects/playground/src/styles.css"
-            ],
+            "styles": ["projects/playground/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -77,18 +73,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/playground/tsconfig.spec.json",
             "assets": [
               "projects/playground/src/favicon.ico",
               "projects/playground/src/assets"
             ],
-            "styles": [
-              "projects/playground/src/styles.css"
-            ],
+            "styles": ["projects/playground/src/styles.css"],
             "scripts": []
           }
         }
@@ -107,17 +98,13 @@
             "outputPath": "dist/password-generator",
             "index": "projects/password-generator/src/index.html",
             "main": "projects/password-generator/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/password-generator/tsconfig.app.json",
             "assets": [
               "projects/password-generator/src/favicon.ico",
               "projects/password-generator/src/assets"
             ],
-            "styles": [
-              "projects/password-generator/src/styles.css"
-            ],
+            "styles": ["projects/password-generator/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -168,18 +155,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/password-generator/tsconfig.spec.json",
             "assets": [
               "projects/password-generator/src/favicon.ico",
               "projects/password-generator/src/assets"
             ],
-            "styles": [
-              "projects/password-generator/src/styles.css"
-            ],
+            "styles": [],
             "scripts": []
           }
         }
