@@ -51,6 +51,5 @@ describe('forceLowerDirective (Spectator)', () => {
   beforeEach(async () => {});
 
   it('should lower initial input value', () => {});
-
-  it('should lower new input', () => {});
+  it('should lower new input value', () => {});
 });
