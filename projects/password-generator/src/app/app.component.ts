@@ -68,6 +68,7 @@ import { Component } from '@angular/core';
   `,
   styles: [],
 })
+
 export class AppComponent {
   message = 'Cliquer sur le bouton "Générer"';
   lengh = 50;

@@ -1,44 +1,70 @@
-<h1>Decouverte Angular</h1>
+<div class="container">
+  <h1>Decouverte Angular PART 1</h1>
+  <hr />
+  <h3>Exercice 1 :</h3>
+  <a no-open href="https://google.com">GOOGLE NO OPEN</a>
+  <br />
+  <br />
+  <a confirm href="https://google.com">GOOGLE CONFIRM</a>
+  <br />
+  <br />
+  <hr />
+  <h3>Exercice 2 :</h3>
+  <user-profile
+    first-name="Pierre"
+    last-name="Cask"
+    job="Médecin"
+    [hired]="false"
+  ></user-profile>
+  <user-profile
+    first-name="Magalie"
+    last-name="Picart"
+    job="Juriste"
+    [hired]="true"
+  ></user-profile>
+  <hr />
+  <h3>Exercice 3</h3>
+  <p
+    (color-change)="onColorChange($event)"
+    #paragraphe="hl"
+    highlight
+    background-color="green"
+    base-color="purple"
+  >
+    highlight est un attribut. Quand angular voir cet attribut il lui greffe un
+    comportement particulier.
+  </p>
 
-<a no-open href="https://google.com">GOOGLE NO OPEN</a>
-<br />
-<br />
-<a confirm href="https://google.com">GOOGLE CONFIRM</a>
-<br />
-<br />
+  <button (click)="paragraphe.onMonseEnter()">changer la couleur</button>
 
-<user-profile
-  first-name="Pierre"
-  last-name="Cask"
-  job="Médecin"
-  [hired]="true"
-></user-profile>
-<user-profile
-  first-name="Magalie"
-  last-name="Picart"
-  job="Juriste"
-  [hired]="false"
-></user-profile>
-<user-profile
-  first-name="Alexandre"
-  last-name="Bon"
-  job="Vigneron"
-  [hired]="true"
-></user-profile>
+  <p highlight>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, illo
+    earum cum quibusdam similique harum. Esse libero enim sit expedita labore
+    explicabo consequatur id deserunt.
+  </p>
+</div>
 
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto
-  similique et, dolorem saepe impedit voluptates vitae, commodi error est beatae
-  numquam? Quia delectus corrupti qui totam voluptatem. Quisquam, neque.
-</p>
+<div class="container">
+  <h1>Decouverte Angular PART 2</h1>
+  <input [(model)]="revenuDeBase" type="number" placeholder="Vos revenus" />
+  <button (click)="calculImpots()">Calcul des impôts</button>
+</div>
 
-<p highlight background-color="green" base-color="purple">
-  highlight est un attribut. Quand angular voir cet attribut il lui greffe un
-  comportement particulier.
-</p>
+<div class="container">
+  <h1>Decouverte Angular PART 3 : SETCLASSES</h1>
+  <p [set-classes]="{ red: age >= 18, bold: nationalite === 'Suisse' }">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, illo
+    earum cum quibusdam similique harum. Esse libero enim sit expedita labore
+    explicabo consequatur id deserunt.
+  </p>
+  <p [ngClass]="{ red: age >= 18, bold: nationalite === 'Suisse' }">
+    NG CLASS FAIT LA MEME CHOSE
+  </p>
+  <button (click)="age = 12">Changer l'age</button>
+  <button (click)="nationalite = 'USA'">Changer la nationalité</button>
+</div>
 
-<p highlight>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, illo earum
-  cum quibusdam similique harum. Esse libero enim sit expedita labore explicabo
-  consequatur id deserunt.
-</p>
+<div class="container">
+  <h1>Exercices : ForceLower</h1>
+  <input force-lower value="MARIE" type="text" placeholder="Prénom" />
+</div>
