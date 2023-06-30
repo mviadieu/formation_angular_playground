@@ -3,13 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ConfirmDirective } from './confirm.directive';
-import { ForceLowerDirective } from './force-lower.directive';
-import { HighlightDirective } from './highlight.directive';
-import { ModelDirective } from './model.directive';
-import { NoOpenDirective } from './no-open.directive';
-import { SetClassesDirective } from './set-classes.directive';
-import { UserProfileComponent } from './user-profile.component';
+import { ConfirmDirective } from './directives/confirm.directive';
+import { ForceLowerDirective } from './directives/force-lower.directive';
+import { HighlightDirective } from './directives/highlight.directive';
+import { ModelDirective } from './directives/model.directive';
+import { NoOpenDirective } from './directives/no-open.directive';
+import { SetClassesDirective } from './directives/set-classes.directive';
+import { UserProfileComponent } from './components/user-profile.component';
 
 @NgModule({
   declarations: [

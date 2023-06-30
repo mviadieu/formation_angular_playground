@@ -53,7 +53,7 @@ describe('AppComponent (avec TestBed)', () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
     }).compileComponents(); // permet de lancer un framework virtuel TestBed et de compiler les composants html et css
-    fixture = TestBed.createComponent(AppComponent); // le fixture est un navigature virtuel qui permet de voir le app component
+    fixture = TestBed.createComponent(AppComponent); // le fixture est un navigateur virtuel qui permet de voir le app component
     fixture.autoDetectChanges(); //lance un cycle de détection de changment automatique à chaque action. (ex click button, MAJ interpolation etc.)
 
     component = fixture.componentInstance; // refacto
